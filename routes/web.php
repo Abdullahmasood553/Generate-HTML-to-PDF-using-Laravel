@@ -22,3 +22,8 @@ Route::post('save_user', 'UserController@save_user');
 Route::get('userFetchList', 'UserController@userFetchList');
 Route::get('total_users', 'UserController@totalUsers');
 Route::get('pdf', 'UserController@pdf')->name('pdf');
+
+
+
+Route::get('customers', 'CustomerController@index');
+Route::post('save_customer', 'CustomerController@save_customer');
