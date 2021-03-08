@@ -29,7 +29,10 @@ class CustomerController extends Controller
                 'lname' => $request->input('lname'),
                 'email' => $request->input('email'),
             ]);
-             Storage::put('public/storage/uploads/customers.pdf', $pdf->output());
+
+
+
+             Storage::put('public/storage/uploads/'.'-'.rand() .'_'.time(). '.'.'pdf', $pdf->output());
              return response()->json(['success' => 'Data Submitted Successfully']);
     }
 }
